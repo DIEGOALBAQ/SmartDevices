@@ -1,0 +1,109 @@
+/* ============================================================
+   CSS personalizado para TechDevices
+   Complementa a Bootstrap 5
+   ============================================================ */
+
+/* Suavizar el scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* ====== Tarjetas de dispositivos ====== */
+.device-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.device-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+/* Contenedor de imagen con altura fija */
+.card-img-wrapper {
+    height: 220px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+}
+
+/* Placeholder cuando no hay imagen */
+.card-img-placeholder {
+    color: #ccc;
+    text-align: center;
+    width: 100%;
+}
+
+/* ====== Header hero ====== */
+header.bg-primary {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%) !important;
+}
+
+/* ====== Navbar ====== */
+.navbar-brand {
+    font-size: 1.4rem;
+}
+
+/* ====== Formularios ====== */
+.form-label {
+    margin-bottom: 0.25rem;
+}
+
+/* ====== Comentarios ====== */
+.text-warning {
+    color: #ffc107 !important;
+}
+
+/* ====== Badges ====== */
+.badge {
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+}
+
+/* ====== Breadcrumbs ====== */
+.breadcrumb {
+    background-color: #e9ecef;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+}
+
+/* ====== Responsive: ajustar tarjetas en móvil ====== */
+@media (max-width: 576px) {
+    .card-img-wrapper {
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .display-5 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ====== Animación de carga ====== */
+.spinner-border {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+/* ====== Tablas admin ====== */
+.table-hover tbody tr:hover {
+    background-color: #f1f3f5;
+    cursor: pointer;
+}
