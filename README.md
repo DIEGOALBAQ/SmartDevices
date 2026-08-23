@@ -1,6 +1,6 @@
 ¡Profe, buenas noches!
 
-Este proyecto que logre hacer, intente hacer algo mas bonito pero pues he perido practica desdepues de casi 2 años de haber parado mis estudios. Aquí le hago entrega del sitio web de dispositivos inteligentes, hecho con Java, Servlets, JSP y MySQL.
+Este es el proyecto que logre hacer, intente hacer algo mas o menos bonito, pero he perdido practica despues de casi 2 años de haber parado mis estudios. Aquí le hago entrega del sitio web de dispositivos inteligentes, hecho con Java, Servlets, JSP y MySQL.
 Espero que le guste y este a la altura con lo que se pidió. Si hay algo por mejorar, con gusto lo ajusto.
 — Diego Alba
 
