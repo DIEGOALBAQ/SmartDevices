@@ -6,6 +6,11 @@ Espero que le guste y este a la altura con lo que se pidió. Si hay algo por mej
 
 ---
 
+# Enlace a mi repositorio 
+
+https://github.com/DIEGOALBAQ/SmartDevices?utm_source=chatgpt.com
+
+
 # SmartDevices
 
 Sitio web para explorar y reseñar dispositivos inteligentes (celulares, portátiles, tablets) con panel de administración.
