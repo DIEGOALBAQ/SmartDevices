@@ -52,7 +52,7 @@
                             <i class="bi bi-person"></i> Usuario
                         </label>
                         <input type="text" class="form-control" name="usuario"
-                               required autofocus placeholder="admin">
+                               required autofocus placeholder="Ingrese su usuario">
                     </div>
 
                     <div class="mb-4">
@@ -68,14 +68,6 @@
                     </button>
                 </form>
 
-                <!-- Credenciales de prueba (solo para proyecto educativo) -->
-                <div class="alert alert-info mt-4 mb-0">
-                    <small>
-                        <strong><i class="bi bi-info-circle"></i> Credenciales de prueba:</strong><br>
-                        Usuario: <code>admin</code><br>
-                        Contraseña: <code>admin123</code>
-                    </small>
-                </div>
 
                 <div class="text-center mt-3">
                     <a href="${pageContext.request.contextPath}/" class="text-decoration-none">
