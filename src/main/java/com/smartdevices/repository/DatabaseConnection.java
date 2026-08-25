@@ -20,11 +20,11 @@ import java.sql.SQLException;
 public class DatabaseConnection {
 
     // ====== Parámetros de conexión a MySQL ======
-    // Cambia estos valores según tu configuración local de MySQL
-    private static final String URL = "jdbc:mysql://localhost:3306/smartdevices"
-            + "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-    private static final String USUARIO = "root";
-    private static final String PASSWORD = "";
+   // Cambia estos valores según tu configuración local de MySQL
+    private static final String URL = System.getenv("DB_URL");
+    private static final String USUARIO = System.getenv("DB_USER");
+    private static final String PASSWORD = System.getenv("DB_PASSWORD");
+
 
     // ====== Patrón Singleton ======
     private static DatabaseConnection instancia;
