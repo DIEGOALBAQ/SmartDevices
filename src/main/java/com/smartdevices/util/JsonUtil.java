@@ -9,21 +9,22 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Utilidad: JsonUtil
  *
- * Métodos helper para enviar respuestas JSON desde los Servlets.
- * Usa la librería Gson para convertir objetos Java a JSON.
+ * Métodos helper para enviar respuestas JSON desde los Servlets. Usa la
+ * librería Gson para convertir objetos Java a JSON.
  */
 public class JsonUtil {
 
     // Instancia de Gson configurada con indentación (pretty printing)
     private static final Gson gson = new GsonBuilder()
             .setPrettyPrinting()
+            .setDateFormat("yyyy-MM-dd")
             .create();
 
     /**
      * Envía un objeto como JSON en la respuesta HTTP.
      *
-     * @param response  Respuesta HTTP del Servlet
-     * @param objeto    Objeto a convertir a JSON
+     * @param response Respuesta HTTP del Servlet
+     * @param objeto Objeto a convertir a JSON
      */
     public static void enviarJson(HttpServletResponse response, Object objeto) throws IOException {
         response.setContentType("application/json");
@@ -55,6 +56,7 @@ public class JsonUtil {
      * Clase interna para respuestas simples de éxito/error.
      */
     private static class RespuestaSimple {
+
         boolean exito;
         String mensaje;
         String error;

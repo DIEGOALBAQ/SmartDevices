@@ -5,26 +5,23 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Clase: DatabaseConnection
- * Capa: Repository
+ * Clase: DatabaseConnection Capa: Repository
  *
- * Responsabilidad:
- *   - Gestionar la conexión a la base de datos MySQL.
- *   - Centralizar los parámetros de conexión (URL, usuario, password).
- *   - Implementar el patrón Singleton para reutilizar la configuración.
+ * Responsabilidad: - Gestionar la conexión a la base de datos MySQL. -
+ * Centralizar los parámetros de conexión (URL, usuario, password). -
+ * Implementar el patrón Singleton para reutilizar la configuración.
  *
- * NOTA PARA PRINCIPIANTES:
- *   En un proyecto real, estos datos deberían estar en un archivo .properties
- *   o variables de entorno. Aquí se ponen directamente para facilitar el aprendizaje.
+ * NOTA PARA PRINCIPIANTES: En un proyecto real, estos datos deberían estar en
+ * un archivo .properties o variables de entorno. Aquí se ponen directamente
+ * para facilitar el aprendizaje.
  */
 public class DatabaseConnection {
 
     // ====== Parámetros de conexión a MySQL ======
-   // Cambia estos valores según tu configuración local de MySQL
-    private static final String URL = System.getenv("DB_URL");
-    private static final String USUARIO = System.getenv("DB_USER");
-    private static final String PASSWORD = System.getenv("DB_PASSWORD");
-
+    // Cambia estos valores según tu configuración local de MySQL
+    private static final String URL = "jdbc:mysql://localhost:3306/smartdevices";
+    private static final String USUARIO = "root";
+    private static final String PASSWORD = "";
 
     // ====== Patrón Singleton ======
     private static DatabaseConnection instancia;
@@ -44,7 +41,8 @@ public class DatabaseConnection {
 
     /**
      * Obtiene la única instancia de DatabaseConnection (patrón Singleton)
-     * @return 
+     *
+     * @return
      */
     public static synchronized DatabaseConnection getInstance() {
         if (instancia == null) {
@@ -56,19 +54,24 @@ public class DatabaseConnection {
     /**
      * Crea y devuelve una nueva conexión a la base de datos.
      *
-     * IMPORTANTE: Quien llama a este método es responsable de cerrar la conexión
-     * con conn.close() o usando try-with-resources.
-     * @return 
+     * IMPORTANTE: Quien llama a este método es responsable de cerrar la
+     * conexión con conn.close() o usando try-with-resources.
+     *
+     * @return
      * @throws java.sql.SQLException
      */
     public Connection getConnection() throws SQLException {
+        System.out.println("DB_URL = " + URL);
+        System.out.println("DB_USER = " + USUARIO);
+
         Connection conn = DriverManager.getConnection(URL, USUARIO, PASSWORD);
         return conn;
     }
 
     /**
-     * Método de prueba para verificar que la conexión funciona.
-     * Ejecútalo desde un main para probar antes de usar el proyecto completo.
+     * Método de prueba para verificar que la conexión funciona. Ejecútalo desde
+     * un main para probar antes de usar el proyecto completo.
+     *
      * @param args
      */
     public static void main(String[] args) {
