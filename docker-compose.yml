@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # 1. Base de Datos (Asumiendo que usas MySQL)
   db:
@@ -24,9 +22,10 @@ services:
     container_name: smartdevices-app
     restart: always
     ports:
-      - "8080:8080" # Cambia el primer 8080 si tu app usa otro puerto
+      - "8080:10000" # <--- CORREGIDO: 8080 (tu Mac/Servidor) -> 10000 (Tomcat en Docker)
     environment:
-      # Conectamos Spring Boot a la base de datos
+      # NOTA: Si es Tomcat puro (no Spring Boot), estas variables podrían no ser leídas automáticamente.
+      # Asegúrate de tener la conexión configurada en tu código (context.xml, application.properties, etc.)
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/smartdevices_db?useSSL=false&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: smart_user
       SPRING_DATASOURCE_PASSWORD: user_password_seguro
